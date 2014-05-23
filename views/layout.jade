@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        title Connect 4
+        link(rel='stylesheet', href='static/components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='static/css/styles.css')
+    body
+        #wrap
+            nav.navbar.navbar-default(role='navigation')
+                .container-fluid
+                    .navbar-header
+                        a.navbar-brand(href='#') Connect 4
+            block content
+        #footer
+            .container
+                p.text-muted
+                    | Developed by
+                    | <a href="http://github.com/kharandziuk">Max Kharandziuk</a>
+        block javascript
+            script(src='/socket.io/socket.io.js')
+            script(src='static/components/jquery/dist/jquery.js')
+            script(src='static/js/frontend.js')
